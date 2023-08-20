@@ -1,0 +1,113 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+:root {
+  --box-shadow: rgba(100, 100, 111, 0.2) 0 7px 29px 0;
+  --color-background: #d9d9d9;
+  --color-card-background: #ffffff;
+  --color-gradient: linear-gradient(90deg, #eeeeee, #f9f9f9, #eeeeee);
+  --color-header: #000000;
+  --color-info: #363949;
+}
+
+.dark-mode {
+  --box-shadow: rgba(0, 0, 0, 0.35) 0 5px 15px;
+  --color-background: #414247;
+  --color-card-background: #252525;
+  --color-gradient: linear-gradient(
+    to right,
+    #656871 0%,
+    #888b94 20%,
+    #656871 40%,
+    #656871 100%
+  );
+  --color-header: #ffffff;
+  --color-info: #cccccc;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background: var(--color-background);
+  transition: all 0.3s ease;
+}
+
+#toggle {
+  position: fixed;
+  top: 3%;
+  right: 3%;
+  width: 40px;
+  height: 40px;
+  background: var(--color-card-background);
+  box-shadow: var(--box-shadow);
+  border: none;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card {
+  max-width: 380px;
+  padding: 1.3rem;
+  background: var(--color-card-background);
+  box-shadow: var(--box-shadow);
+  border-radius: 0.5rem;
+  transition: all 0.3s ease;
+}
+.card .card-image {
+  margin-bottom: 1rem;
+}
+.card .card-image img {
+  width: 100%;
+  aspect-ratio: 4/3;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 0.25rem;
+}
+.card .card-header {
+  display: inline-block;
+  margin-bottom: 0.25rem;
+  color: var(--color-header);
+  font-size: 1.25rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.card .card-info {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  color: var(--color-info);
+  text-overflow: ellipsis;
+}
+.card .loading {
+  position: relative;
+}
+@keyframes loading {
+  0% {
+    background-position: -100% 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}
+.card .loading::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  width: 100%;
+  height: 100%;
+  content: "";
+  background: var(--color-gradient);
+  background-size: 200%;
+  border-radius: 0.25rem;
+  animation: loading 1s infinite reverse;
+}/*# sourceMappingURL=style.css.map */
