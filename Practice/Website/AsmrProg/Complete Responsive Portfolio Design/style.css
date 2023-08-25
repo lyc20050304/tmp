@@ -1,0 +1,338 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  border: none;
+  outline: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #18181b;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  display: flex;
+  width: 100%;
+}
+
+.btn {
+  padding: 1rem 2rem;
+  color: #ffffff;
+  font-size: 1rem;
+  background-color: #1d4ed8;
+  border-radius: 5px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.btn:hover {
+  background-color: #1e40af;
+}
+
+.container {
+  max-width: 1200px;
+  padding: 5rem 2rem;
+  margin: auto;
+}
+
+.blur {
+  position: absolute;
+  z-index: -100;
+  box-shadow: 0 0 1000px 50px #1d4ed8;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+  margin: auto;
+}
+nav .nav-logo {
+  max-width: 100px;
+}
+nav .nav-links {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  list-style: none;
+}
+nav .nav-links .link a {
+  position: relative;
+  padding-bottom: 0.75rem;
+  color: #ffffff;
+}
+nav .nav-links .link a::after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  content: "";
+  background-color: #1d4ed8;
+  transition: all 0.3s ease;
+}
+nav .nav-links .link a:hover::after {
+  width: 70%;
+}
+
+header {
+  position: relative;
+  display: grid;
+  align-items: center;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding-top: 2rem;
+}
+header .content h4 {
+  margin-bottom: 1rem;
+  color: #cccccc;
+  font-size: 1rem;
+  font-weight: 600;
+}
+header .content h1 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 700;
+  line-height: 4rem;
+}
+header .content h1 span {
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+}
+header .content p {
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+header .image {
+  position: relative;
+}
+header .image::before {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  z-index: -100;
+  color: #1d4ed8;
+  content: "o";
+  font-size: 38rem;
+  font-weight: 400;
+  line-height: 20rem;
+  transform: translateX(-50%);
+  opacity: 0.2;
+}
+header .image img {
+  max-width: 600px;
+  margin: auto;
+}
+
+section .header {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 2.25rem;
+  font-weight: 600;
+  text-align: center;
+}
+section .features {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+section .features .card {
+  padding: 1rem;
+  background-color: #27272a;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+section .features .card span {
+  display: inline-block;
+  padding: 2px 9px;
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.75rem;
+  background-color: #1e40af;
+  border-radius: 5px;
+}
+section .features .card h4 {
+  margin-bottom: 0.5rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+section .features .card p {
+  margin-bottom: 1rem;
+  color: #cccccc;
+}
+section .features .card a {
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+section .features .card a:hover {
+  color: #1e40af;
+}
+section .features .card:hover {
+  background-color: #323232;
+  border-color: #ffffff;
+}
+section .sub-header {
+  max-width: 600px;
+  margin: auto;
+  color: #cccccc;
+  text-align: center;
+}
+section .pricing {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 4rem;
+}
+section .pricing .card {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 2rem;
+  background-color: #27272a;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  transition: all 0.3s ease;
+}
+section .pricing .card .content {
+  flex: 1;
+  margin-bottom: 2rem;
+}
+section .pricing .card .content h4 {
+  margin-bottom: 1rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+section .pricing .card .content h3 {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-size: 2rem;
+  font-weight: 600;
+  border-bottom: 2px dashed #ffffff;
+}
+section .pricing .card .content p {
+  margin-bottom: 0.75rem;
+  color: #ffffff;
+}
+section .pricing .card .content p i {
+  margin-right: 0.3rem;
+  color: #cccccc;
+  font-size: 1.2rem;
+}
+section .pricing .card button {
+  color: #ffffff;
+  background-color: transparent;
+  border: 2px solid #ffffff;
+}
+section .pricing .card button:hover {
+  background-color: #1e40af;
+  border-color: #1e40af;
+}
+section .pricing .card:hover {
+  background-color: #323232;
+  border-color: #ffffff;
+}
+
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 400px repeat(3, 1fr);
+  gap: 2rem;
+}
+footer .column .logo {
+  max-width: 100px;
+  margin-bottom: 2rem;
+}
+footer .column p {
+  margin-bottom: 2rem;
+  color: #cccccc;
+}
+footer .column .socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+footer .column .socials a {
+  padding: 5px 10px;
+  color: #cccccc;
+  font-size: 1.25rem;
+  border: 1px solid #cccccc;
+  border-radius: 100%;
+  transition: all 0.3s ease;
+}
+footer .column .socials a:hover {
+  color: #ffffff;
+  background-color: #1d4ed8;
+  border-color: #1d4ed8;
+}
+footer .column h4 {
+  margin-bottom: 2rem;
+  color: #ffffff;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+footer .column a {
+  display: block;
+  margin-bottom: 1rem;
+  color: #cccccc;
+  transition: all 0.3s ease;
+}
+footer .column a:hover {
+  color: #1d4ed8;
+}
+
+.copyright {
+  max-width: 1200px;
+  padding: 1rem;
+  margin: auto;
+  color: #ffffff;
+  font-size: 0.8rem;
+  text-align: center;
+}
+
+@media (width < 900px) {
+  nav .nav-links {
+    display: none;
+  }
+  header {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  header .image {
+    grid-area: 1/1/2/2;
+  }
+  section .features {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  section .pricing {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 200px;
+  }
+}
+@media (width < 600px) {
+  header .image::before {
+    display: none;
+  }
+  section .features {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  section .pricing {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  footer {
+    grid-template-columns: 1fr 150px;
+  }
+}/*# sourceMappingURL=style.css.map */
